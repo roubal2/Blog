@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 20px;">
+
+    <h1 style="color: #333; text-align: center; border-bottom: 2px solid #ccc; padding-bottom: 10px;">Welcome to My Awesome Blog</h1>
+
+    <ul style="list-style: none; padding: 0;">
+        <% blogPosts.forEach(post => { %>
+            <li style="margin: 20px 0; border: 1px solid #eee; padding: 10px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                <h2 style="color: #0066cc;"><%= post.title %></h2>
+                <p style="color: #666;"><%= post.content %></p>
+            </li>
+        <% }); %>
+    </ul>
+
+    <a href="/new" style="display: block; text-align: center; padding: 10px; background-color: #0066cc; color: #fff; text-decoration: none; border-radius: 5px; margin-top: 20px;">Create a New Blog Post</a>
+
+</body>
+</html>
